@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body:before {
+    content: '';
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+
+    background-image:url(G.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+    /* -webkit-filter: blur(10px);
+     -moz-filter: blur(10px);*/
+    filter: blur(0px);
+}
+.contact-form {
+    /* position: absolute; */
+    position: fixed;
+    margin-top: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    height: 400px;
+    padding: 80px 40px;
+    /* background:pink ; */
+    /* background: rgba(0, 0, 0, 0.5); */
+    background: rgba(0.2, 0.4, 0.6, 0.8);
+
+}
+.avatar {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    top: calc(-80px/2);
+    left: 150px;
+}
+.contact-form  .card-header h2 {
+    margin: 0;
+    padding: 0 0 20px;
+    color: palevioletred;
+    text-align: center;
+    margin-top: -2px;
+    text-transform: uppercase;
+}
+.contact-form p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: palevioletred;
+
+}
+
+.contact-form  input {
+    width: 100%;
+
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+.contact-form   input[type=email], .contact-form input[type=password] {
+    border: none;
+    background: transparent;
+    outline: none;
+    border-bottom: 1px solid #fff;
+    height: 20px;
+    color: palevioletred;
+    font-size: 16px;
+
+
+}
+
+.contact-form [type=submit] {
+    height: 30px;
+    color: #fff;
+    font-size: 15px;
+
+    background: palevioletred;
+
+    cursor: pointer;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    margin-top: 6%;
+}
+a {
+    color: palevioletred;
+    text-decoration: none;
+    margin-left: 10px;
+    background-color: transparent;
+}
+
+a:hover {
+    color: pink;
+    text-decoration: underline;
+}
+
+a:not([href]):not([class]) {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:not([href]):not([class]):hover {
+    color: inherit;
+    text-decoration: none;
+}
+input[type=checkbox] {
+    width: 20%;
+}

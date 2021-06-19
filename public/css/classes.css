@@ -1,0 +1,84 @@
+.sclasses {
+  background: rgb(255, 255, 255);
+}
+
+.classbutton {
+	outline: none !important;
+	border: none;
+	background: transparent;
+}
+
+.classbutton:hover {
+	cursor: pointer;
+}
+
+.oblique {
+  font-style: oblique;
+}
+
+
+.container-classes100-form-btn {
+    width: 55%;
+    margin-left: 25%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 30px;
+  }
+.bb{
+      padding-top: 40px;
+}
+.hh{
+    padding-top: 100px;
+}
+.d-flex{
+
+  font-size: 25px;
+}
+  .classbutton {
+    font-family: Montserrat-Bold;
+    font-size: 25px;
+    line-height: 1.5;
+    color: #fff;
+    text-transform: uppercase;
+
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    border:1px solid #ffffff;
+    background: #007bff ;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+
+  .classbutton:hover {
+    background: #ffffff;
+    color: black;
+  }
+
+  input[type="submit"]:disabled {
+    background: #f02828;
+    color: white;
+  }
+  @media only screen and (max-width:1079px){
+    .container-classes100-form-btn {
+    width: 85%;
+margin-left: 5%;
+      }
+
+  }
