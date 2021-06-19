@@ -65,7 +65,7 @@
             @php($user = \Auth::user())
 
             <ul class="nav navbar-nav navbar-nav-first">
-                <li><a href="http://localhost/E-learningProject/E-learning/blog/public" class="smoothScroll">Home</a></li>
+                <li><a href="./" class="smoothScroll">Home</a></li>
                 <li><a href="http://localhost/E-learningProject/E-learning/blog/public/about" class="smoothScroll">About</a></li>
                 @if($user!=null and $user->Type!==null)
                 <li><a href="http://localhost/E-learningProject/E-learning/blog/public/Classes" class="smoothScroll">classes</a></li>
