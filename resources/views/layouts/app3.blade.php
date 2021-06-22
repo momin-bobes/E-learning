@@ -65,15 +65,15 @@
             @php($user = \Auth::user())
 
             <ul class="nav navbar-nav navbar-nav-first">
-                <li><a href="http://localhost/E-learningProject/E-learning/blog/public" class="smoothScroll">Home</a></li>
-                <li><a href="http://localhost/E-learningProject/E-learning/blog/public/about" class="smoothScroll">About</a></li>
+                <li><a href="./" class="smoothScroll">Home</a></li>
+                <li><a href="./about" class="smoothScroll">About</a></li>
                 @if($user!=null and $user->Type!==null)
                 <li><a href="http://localhost/E-learningProject/E-learning/blog/public/Classes" class="smoothScroll">classes</a></li>
                 @endif
 
                     <li><a href="http://localhost/E-learningProject/E-learning/blog/public/laboratory" class="smoothScroll">laboratory</a></li>
                 <li><a href="http://localhost/E-learningProject/E-learning/blog/public/contact" class="smoothScroll">Contact us</a></li>
-                <li><a href="http://localhost/E-learningProject/E-learning/blog/public/Teachers/create" class="smoothScroll">Join Us</a></li>
+{{--                <li><a href="http://localhost/E-learningProject/E-learning/blog/public/Teachers/create" class="smoothScroll">Join Us</a></li>--}}
                 <li><a href="http://localhost/E-learningProject/E-learning/blog/public/TopStudent" class="smoothScroll">TopStudent</a></li>
 
                 <!-- TEST FOR CALLING AN EXAMS WITH NAME -->

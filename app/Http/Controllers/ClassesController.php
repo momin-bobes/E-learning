@@ -25,7 +25,7 @@ class ClassesController extends Controller
 
 
 
-        return view('edu.Classes.viewClasses')->with('user',$user);
+        return view('edu.Classes.veiwClass.viewclasses')->with('user',$user);
     }
     public function index2($name)
     {

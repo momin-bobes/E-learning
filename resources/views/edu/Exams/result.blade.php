@@ -1,4 +1,6 @@
+@extends('layouts.app3')
 
+@section('content')
 
     <div class ="container">
     <h2>النتيجة</h2>
@@ -115,3 +117,4 @@
 </body>
 </html>
 <h1></h1>
+@endsection
