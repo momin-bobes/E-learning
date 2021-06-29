@@ -20,7 +20,7 @@
     <nav id="sidebar">
         <div class="title">Side Menu</div>
         <ul class="list-items">
-            <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="http://localhost/E-learningProject/E-learning/blog/public/"><i class="fas fa-home"></i>Home</a></li>
             <li><a href="http://localhost/E-learningProject/E-learning/blog/public/Classes/view/{{$class->classname}}/{{$class->classnum}}/obj"><i class="fas fa-sliders-h"></i>الأهداف</a></li>
             <li><a href="http://localhost/E-learningProject/E-learning/blog/public/Classes/view/{{$class->classname}}/{{$class->classnum}}/images"><i class="fa fa-file-image-o"></i>صور</a></li>
             <li><a href="http://localhost/E-learningProject/E-learning/blog/public/Classes/view/{{$class->classname}}/{{$class->classnum}}/video"><i class="fa fa-fast-backward"></i>فيديو</a></li>

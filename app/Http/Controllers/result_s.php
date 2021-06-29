@@ -5,8 +5,11 @@ namespace App\Http\Controllers;
 use App\student_avg;
 use App\Student_progress;
 use App\student_progresses;
+use App\User;
 use Illuminate\Http\Request;
 use function MongoDB\BSON\toJSON;
+use Illuminate\Support\Str;
+
 
 class result_s extends Controller
 {
@@ -16,6 +19,18 @@ class result_s extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index($name)
+    {
+
+        $myString = $name;
+        $myArray = explode('&', $myString);
+
+
+
+        $this->saveResult($myArray[0],$myArray[1]);
+
+        return view('edu.Exams.result');
+    }
+    public function getmobileresult($name,$name2)
     {
 
         $myString = $name;
@@ -57,8 +72,24 @@ class result_s extends Controller
             $mark=\App\result_s::where([['title','=',$title],['name','=',$user->name]])->get();
             if(count($mark)!=0)
             {
-                if ($percentage>=50)
-                    $res='success';
+                if ($percentage>=50) {
+                    $res = 'success';
+                    if(Str::contains($title, 'final_'))
+                    {
+                        $newclass=$user->class+1;
+                        user::where('id', $user->id)
+                            ->update(['class' => $newclass,
+
+                                ]
+                            );
+
+
+                    }
+
+
+
+
+                }
                 else
                     $res='failed';
 
@@ -76,8 +107,25 @@ class result_s extends Controller
             else
             {
                 $res=0;
-                if ($percentage>50)
-                    $res='success';
+                if ($percentage>50) {
+                    $res = 'success';
+                    if(Str::contains($title, 'final_'))
+                    {
+                        $newclass=$user->class+1;
+                        user::where('id', $user->id)
+                            ->update(['class' => $newclass,
+
+                                ]
+                            );
+
+
+                    }
+
+
+
+
+
+                }
                 else
                     $res='failed';
 

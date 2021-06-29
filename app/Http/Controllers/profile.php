@@ -48,11 +48,12 @@ class profile extends Controller
 
         return $user;
     }
-    public function test($key1,$key2)
+    public function getresult($key1,$key2)
     {
+        $user=\App\result_s::where([['name','=',$key2],['title','like','%'.$key1.'%']])->get();
 
 
-        return $key2;
+        return $user;
     }
     public function editProfile()
     {

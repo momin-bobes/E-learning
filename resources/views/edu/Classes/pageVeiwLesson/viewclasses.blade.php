@@ -39,6 +39,7 @@
         $counter2=0;
         $exams=0;
         $lessons=1;
+        $final=0;
 
     @endphp
     @foreach($Teachers as $Teacher)
@@ -46,6 +47,7 @@
             @php
                 $counter=$counter+1;
                 $counter2=$counter2+1;
+                $final=$final+1;
 
             @endphp
 
@@ -68,14 +70,17 @@
             </form>
         </div> <!-- cd-timeline-content -->
     </div> <!-- cd-timeline-block -->
+
+
         @php
             $lessons=$lessons+1;
-
         @endphp
+
             @if($counter2==4)
                 @if($names[$exams]!=null)
                 @php
                     $counter2=0;
+                    $final=$final+1;
 
                 @endphp
                     <div class="cd-timeline-block">
@@ -103,6 +108,7 @@
             @php
                 $counter=$counter+1;
                 $counter2=$counter2+1;
+                $final=$final+1;
 
             @endphp
             <div class="cd-timeline-block" data-aos="fade-up">
@@ -132,6 +138,7 @@
                 @if($names[$exams]!=null)
                     @php
                         $counter2=0;
+                        $final=$final+1;
 
                     @endphp
                     <div class="cd-timeline-block">
@@ -159,6 +166,7 @@
             @php
                 $counter=0;
                 $counter2=$counter2+1;
+                $final=$final+1
 
             @endphp
             <div class="cd-timeline-block" data-aos="fade-up">
@@ -188,6 +196,7 @@
                 @if($names[$exams]!=null)
                     @php
                         $counter2=0;
+                        $final=$final+1;
 
                     @endphp
                     <div class="cd-timeline-block">
@@ -216,6 +225,24 @@
         @endif
 
     @endforeach
+    @if($final==10)
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-picture">
+                <!--<img src="</?php echo URLROOT ?>/public/img/gradeone/cd-icon-movie.svg" alt="Location">-->
+            </div> <!-- cd-timeline-img -->
+
+            <div class="cd-timeline-content content1 info-right"data-aos="fade-up-left">
+                <h3  class=" am1">الإختبار النهائي</h3> </br>
+
+                <h4>هيا بنا نختبر معرفتك في الدروس الثلاث السابقة والانتقال معا للمستوى التالي</h4>
+                    <form action="http://localhost/E-learningProject/E-learning/blog/public/exam/{{$finals->key}}" method="get">
+                    </br>
+                    <input type="submit" value="إبدأ الإختبار" class="lessonbutton1" >
+                </form>
+                <!--<span class="cd-date">Feb 14</span>-->
+            </div> <!-- cd-timeline-content -->
+        </div>
+    @endif
 {{--    <div class="cd-timeline-block">--}}
 {{--        <div class="cd-timeline-img cd-movie">--}}
 {{--            <!--<img class="img_style" src="</?php echo URLROOT ?>/public/img/gradeone/cd-icon-movie.svg" alt="Movie">-->--}}

@@ -95,7 +95,8 @@ Route::get('/Classes/view/{name}/{name2}/learn','ClassesController@viewlearn');
 Route::get('/Classes/view/{name}/{name2}/try','ClassesController@viewtry');
 
 
-
+//lab
+Route::get('/lab','LabController@index');
 
 
 Route::get('/class/{profile}/{edit}','profile@test');
@@ -104,3 +105,6 @@ Route::get('/class/{profile}/{edit}','profile@test');
 
 //Api for mobile application
 Route::get('/progress/{name}','profile@progress');
+Route::get('/result/mob/{class}/{name}','profile@getresult');
+
+

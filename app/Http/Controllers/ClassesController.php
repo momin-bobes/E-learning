@@ -16,7 +16,7 @@ class ClassesController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
      */
     public function index()
     {
@@ -32,11 +32,15 @@ class ClassesController extends Controller
         $user = \Auth::user();
 
         $Teachers= Classes_content::where('classname','=',$name)->get();
+                $names=$name."th%";
+        $Teachers2= exam_titles::where('key','like',$names)->get();
 
-        $Teachers2= exam_titles::where('key','like','seventh%')->get();
+        $finals= exam_titles::where('key','=','final_'.$name)->First();
 
 
-        return view('edu.Classes.pageVeiwLesson.viewclasses')->with('Teachers',$Teachers)->with('Teachers2',$Teachers2);
+        return view('edu.Classes.pageVeiwLesson.viewclasses')->with('Teachers',$Teachers)->with('Teachers2',$Teachers2)->with('finals',$finals);
+
+
     }
 
     public function viewclass($name,$name2)
