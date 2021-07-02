@@ -2,9 +2,18 @@
 
   "use strict";
 
+// start partical
+
+    // $('#add-attachment').on('click', function () {
+    //     console.log("s");
+    //     $('#attachment-row-1').clone().after('#attachments');
+    // });
+
+
+    //end partical
     // PRE LOADER
     $(window).load(function(){
-      $('.preloader').fadeOut(1000); // set duration in brackets    
+      $('.preloader').fadeOut(1000); // set duration in brackets
     });
 
 
@@ -83,6 +92,14 @@
           }, 1000);
             event.preventDefault();
       });
-    });  
+    });
+
+
 
 })(jQuery);
+
+
+
+
+
+

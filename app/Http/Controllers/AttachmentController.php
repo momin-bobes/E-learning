@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
+use App\Models\Attachment;
 use Illuminate\Http\Request;
 
-class cert extends Controller
+class AttachmentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,16 +14,7 @@ class cert extends Controller
      */
     public function index()
     {
-        $user = \Auth::user();
-        $certs2= \App\result_s::where('user_id','=',$user->id)->get();
-
-        $certs=\App\result_s::where([['user_id','=',$user->id],['result','=','success']])->get();
-//        return $certs;
-
-
-
-        return view('edu.Exams.cirtificate')->with('user',$user)->with('certs',$certs);
-
+        //
     }
 
     /**
@@ -50,10 +41,10 @@ class cert extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Attachment  $attachment
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Attachment $attachment)
     {
         //
     }
@@ -61,10 +52,10 @@ class cert extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Attachment  $attachment
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Attachment $attachment)
     {
         //
     }
@@ -73,10 +64,10 @@ class cert extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Attachment  $attachment
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Attachment $attachment)
     {
         //
     }
@@ -84,11 +75,12 @@ class cert extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Attachment  $attachment
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Attachment $attachment)
     {
-        //
+        $attachment->deleteWithFile();
+        return back()->with(['msg' => 'Attachment deleted successfully.']);
     }
 }

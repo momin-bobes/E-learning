@@ -13,6 +13,7 @@ class LabController extends Controller
      */
     public function index()
     {
+        $test=8;
         return view('edu.lab.index');
     }
 

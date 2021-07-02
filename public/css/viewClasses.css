@@ -617,7 +617,7 @@ Primary style
     margin: 0 auto;
   }
   .cd-container::after {
-  
+
     content: '';
     display: table;
     clear: both;
@@ -867,7 +867,7 @@ Primary style
     border-radius: 3px;
     transition: .4s;
     margin-left: 200px;
-   
+
 }
 
 .lessonbutton1:hover {
@@ -1204,7 +1204,7 @@ a:focus {
   background-repeat: no-repeat;
   z-index: -1;
 }
-/* 
+/*
 .sub_page .top_container::before {
   background-color: #fdd31d;
   background-image: none;
@@ -1349,4 +1349,3 @@ a:focus {
 
 /*end header section*/
   /* footer */
-  

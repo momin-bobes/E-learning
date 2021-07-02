@@ -4,7 +4,15 @@
 </head>
 <style>
     body,html{height: 100%;}
+    .bb,.copyright {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        width: 100%;
 
+        color: white;
+        text-align: center;
+    }
 </style>
 
 <body >
@@ -144,23 +152,23 @@
             <div class="bubble" style="--size:3.4096626676312978rem; --distance:6.670286920591024rem; --position:44.22238958124267%; --time:3.1567754265604244s; --delay:-2.3402395421842233s;"></div>
         </div>
 
-        <div class="content">
+        <div class="content-footer">
 
-                <section id="lab_social_icon_footer">
+            <section id="lab_social_icon_footer">
 
-                    <!-- Include Font Awesome Stylesheet in Header -->
-                    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-                    <div class="container">
-                        <div class="text-center center-block">
-                            <a href="https://www.facebook.com/bootsnipp"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
-                            <a href="https://twitter.com/bootsnipp"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
-                            <a href="https://plus.google.com/+Bootsnipp-page"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
-                            <a href="mailto:#"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
-                        </div>
+                <!-- Include Font Awesome Stylesheet in Header -->
+                <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+                <div class="container">
+                    <div class="text-center center-block">
+                        <a href="https://www.facebook.com/bootsnipp"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+                        <a href="https://twitter.com/bootsnipp"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+                        <a href="https://plus.google.com/+Bootsnipp-page"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
+                        <a href="mailto:#"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
                     </div>
-                </section>
+                </div>
+            </section>
 
-            </div>
+        </div>
 
     </div>
     <svg style="position:fixed; top:100vh">
@@ -179,7 +187,7 @@
     margin-top:0px;
     width: 100%;
     padding: 15px 0;
-    background: palevioletred;
+    background: rgb(140, 146, 233);
     color: #FFF;
     font-size: 15px;
 ">

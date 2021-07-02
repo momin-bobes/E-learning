@@ -108,3 +108,30 @@ Route::get('/progress/{name}','profile@progress');
 Route::get('/result/mob/{class}/{name}','profile@getresult');
 
 
+//partical session
+Auth::routes();
+
+
+Route::get('session/{id}', function ($id) {
+    return view('edu.partials.viewPartical', ['session' => App\Models\Practical::findOrFail($id)]);
+});
+Route::post('comments', 'CommentController@store')->name('comments.store')->middleware('auth');
+Route::get('comments/{id}', 'CommentController@index')->name('comments.index')->middleware('auth');
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('practicals', 'PracticalController')->middleware('auth');
+Route::get('practicals/index', 'PracticalController@index')->middleware('auth');
+
+    Route::delete('attachments/{attachment}', 'AttachmentController@destroy')->name('attachments.destroy');
+
+
+//Route::group(['middleware' => ['auth', 'teacher']], function() {
+//    Route::resource('practicals', 'PracticalController');
+//    Route::delete('attachments/{attachment}', 'AttachmentController@destroy')->name('attachments.destroy');
+//});
+// Route::get('practicals', 'PracticalController@index');
+// Route::get('practicals/create', 'PracticalController@create');
+// Route::post('practicals', 'PracticalController@store');
+// Route::get('practicals/{practical}/edit', 'PracticalController@edit');
+// Route::put('practicals/{practical}', 'PracticalController@update');
+// Route::delete('practicals/{practical}', 'PracticalController@destroy');
