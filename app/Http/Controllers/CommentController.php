@@ -51,7 +51,8 @@ class CommentController extends Controller
             return $validator->messages();
         }
         $data = $validator->valid();
-        $data['user_id'] = 1;
+        $user = \Auth::user();
+        $data['user_id'] = $user->id;
         $comment = Comment::create($data);
         return response()->json($comment, 201);
     }

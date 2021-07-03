@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="contact-form">
+                    <div class="contact-form3">
                         <img alt="" class="avatar" src="images/user.jpg">
                         <div class="card-header"><h2>{{ __('Register') }}</h2></div>
 

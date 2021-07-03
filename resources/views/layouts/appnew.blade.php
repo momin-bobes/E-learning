@@ -17,7 +17,7 @@ https://templatemo.com/tm-516-known
      <meta name="author" content="">
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
      <link rel="stylesheet" href="/E-learningProject/E-learning/blog/public/css/templatemo-style.css">
-     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="/E-learningProject/E-learning/blog/public/css/bootstrap.min.css">
      <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
 
 
@@ -131,12 +131,12 @@ https://templatemo.com/tm-516-known
 
 </main>
 
-     <!-- SCRIPTS -->
-     <script src="js/jquery.js"></script>
-     <script src="js/bootstrap.min.js"></script>
-     <script src="js/owl.carousel.min.js"></script>
-     <script src="js/smoothscroll.js"></script>
-     <script src="js/custom.js"></script>
+{{--     <!-- SCRIPTS -->--}}
+{{--     <script src="js/jquery.js"></script>--}}
+{{--     <script src="js/bootstrap.min.js"></script>--}}
+{{--     <script src="js/owl.carousel.min.js"></script>--}}
+{{--     <script src="js/smoothscroll.js"></script>--}}
+{{--     <script src="js/custom.js"></script>--}}
 
 </body>
 </html>
